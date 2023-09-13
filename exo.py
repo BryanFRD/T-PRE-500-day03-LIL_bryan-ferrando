@@ -66,11 +66,11 @@ for s in separator:
   if tmp is None:
     tmp = a.split(s)
   else:
-    for i in range(0, tmp.__len__()):
+    for i in range(0, len(tmp)):
        v = tmp[i]
        tmp.pop(i)
        t = str(v).split(s)
-       for j in range(0, t.__len__()):
+       for j in range(0, len(t)):
          tmp.insert(i+j, t[j])
     
 new = []
