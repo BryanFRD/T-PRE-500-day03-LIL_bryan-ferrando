@@ -65,17 +65,18 @@ separator = [".", "?"]
 for s in separator:
   if tmp is None:
     tmp = a.split(s)
-  else:
-    for i in range(0, len(tmp)):
-       v = tmp[i]
-       tmp.pop(i)
-       t = str(v).split(s)
-       for j in range(0, len(t)):
-         tmp.insert(i+j, t[j])
+    continue
+  
+  for i in range(0, len(tmp)):
+      v = tmp[i]
+      tmp.pop(i)
+      t = str(v).split(s)
+      for j in range(0, len(t)):
+        tmp.insert(i+j, t[j])
     
 new = []
 for t in tmp:
   new.append(t.strip().split(" ")[0])
-  
+
 print(" ".join(new))
 
